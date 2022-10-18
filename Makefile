@@ -7,8 +7,9 @@ test-report: test ## Display generated coverage.out file in html on default brow
 	@go tool cover -html=coverage.out
 
 .PHONY: build
-build: ## Build the project
-	@go build
+build: ## Build the project to ./bin/mqtt executable
+	@mkdir -p ./bin
+	@go build -o ./bin/mqtt
 
 .PHONY: run
 run: ## Run the project without creating the executable
@@ -17,6 +18,10 @@ run: ## Run the project without creating the executable
 .PHONY: format
 format: ## Format project using basic `go fmt`
 	@go fmt ./...
+
+.PHONY: clean
+clean: ## Clean project executable and directory
+	@rm -rf ./bin
 
 .PHONY: help
 help: ## Print this help message
