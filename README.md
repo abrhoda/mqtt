@@ -3,7 +3,7 @@
  - [License](#License)
 
 ## Introduction
-MQTT is a personal broker.
+MQTT is a personal broker + client written on the weekends in small increments
 
 ## License
-Distributed under the MIT license. See `LICENSE.txt` at project root for more information. 
+Distributed under the MIT license. See `LICENSE.md` at project root for more information. 
